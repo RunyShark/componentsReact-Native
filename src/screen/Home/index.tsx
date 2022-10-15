@@ -2,13 +2,10 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import Icon from 'react-native-vector-icons/Ionicons';
+
+import {FlattListMenuItem, MenuItem} from '../../index';
 import {styles} from './HomeStyle';
-interface MenuItem {
-  name: string;
-  icon: string;
-  component: string;
-}
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const menuItems: MenuItem[] = [
   {
@@ -26,14 +23,6 @@ const menuItems: MenuItem[] = [
 export const HomeScreen = () => {
   const {top} = useSafeAreaInsets();
 
-  const renderMenuItem = (menuItem: MenuItem) => (
-    <View>
-      <Text>
-        {menuItem.name} - {menuItem.icon}
-      </Text>
-    </View>
-  );
-
   const renderListHeader = () => (
     <View style={{marginTop: top + 20, marginBottom: 20}}>
       <Text style={styles.title}>Options menu</Text>
@@ -46,7 +35,7 @@ export const HomeScreen = () => {
     <View style={(styles.componente, styles.globalMargin)}>
       <FlatList
         data={menuItems}
-        renderItem={({item}) => renderMenuItem(item)}
+        renderItem={({item}) => <FlattListMenuItem {...item} />}
         keyExtractor={(item) => item.name}
         ListHeaderComponent={renderListHeader}
         ItemSeparatorComponent={itemSeparator}
