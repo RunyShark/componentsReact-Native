@@ -5,7 +5,6 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {FlattListMenuItem, MenuItem} from '../../index';
 import {styles} from './HomeStyle';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 const menuItems: MenuItem[] = [
   {
