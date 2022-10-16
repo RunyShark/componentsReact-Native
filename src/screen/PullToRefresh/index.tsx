@@ -18,7 +18,11 @@ export const PullToRefreshScreen = () => {
   return (
     <ScrollView
       refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        <RefreshControl
+          refreshing={refreshing}
+          onRefresh={onRefresh}
+          progressViewOffset={150}
+        />
       }>
       <View>
         <HeaderTitle title="Pull to refresh" />
