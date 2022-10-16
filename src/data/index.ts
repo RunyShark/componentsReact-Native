@@ -8,6 +8,7 @@ import {
   AlertScreen,
   InputTextScreen,
   PullToRefreshScreen,
+  SectionListScreen,
 } from '../index';
 
 export const menuItemsTemplate: MenuItem[] = [
@@ -40,6 +41,11 @@ export const menuItemsTemplate: MenuItem[] = [
     name: 'Pull to Refresh 05',
     icon: 'refresh-outline',
     component: 'PullToRefreshScreen',
+  },
+  {
+    name: 'Section List 06',
+    icon: 'refresh-outline',
+    component: 'SectionListScreen',
   },
 ];
 
@@ -85,5 +91,11 @@ export const routesStack: RoutesProps[] = [
     name: 'PullToRefreshScreen',
     title: 'PullToRefreshScreen',
     component: PullToRefreshScreen,
+  },
+  {
+    id: '8',
+    name: 'SectionListScreen',
+    title: 'SectionListScreen',
+    component: SectionListScreen,
   },
 ];
