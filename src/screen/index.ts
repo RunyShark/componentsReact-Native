@@ -7,3 +7,4 @@ export * from './PullToRefresh';
 export * from './SectionList';
 export * from './Modal';
 export * from './infiniteScroll';
+export * from './Slice';

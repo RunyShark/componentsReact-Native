@@ -12,6 +12,7 @@ import {
   DataProps,
   ModalScreen,
   infiniteScrollScreen,
+  SliceScreen,
 } from '../index';
 
 export const menuItemsTemplate: MenuItem[] = [
@@ -59,6 +60,11 @@ export const menuItemsTemplate: MenuItem[] = [
     name: 'ModalScreen 08',
     icon: 'refresh-outline',
     component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'Temp 09',
+    icon: 'refresh-outline',
+    component: 'SliceScreen',
   },
 ];
 
@@ -121,6 +127,12 @@ export const routesStack: RoutesProps[] = [
     id: '10',
     name: 'infiniteScrollScreen',
     title: 'infiniteScrollScreen',
+    component: infiniteScrollScreen,
+  },
+  {
+    id: '11',
+    name: 'SliceScreen',
+    title: 'SliceScreen',
     component: infiniteScrollScreen,
   },
 ];
