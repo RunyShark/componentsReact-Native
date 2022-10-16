@@ -9,6 +9,8 @@ import {
   InputTextScreen,
   PullToRefreshScreen,
   SectionListScreen,
+  DataProps,
+  ModalScreen,
 } from '../index';
 
 export const menuItemsTemplate: MenuItem[] = [
@@ -46,6 +48,11 @@ export const menuItemsTemplate: MenuItem[] = [
     name: 'Section List 06',
     icon: 'refresh-outline',
     component: 'SectionListScreen',
+  },
+  {
+    name: 'ModalScreen 07',
+    icon: 'refresh-outline',
+    component: 'ModalScreen',
   },
 ];
 
@@ -97,5 +104,30 @@ export const routesStack: RoutesProps[] = [
     name: 'SectionListScreen',
     title: 'SectionListScreen',
     component: SectionListScreen,
+  },
+  {
+    id: '9',
+    name: 'ModalScreen',
+    title: 'ModalScreen',
+    component: ModalScreen,
+  },
+];
+
+export const DATA: DataProps[] = [
+  {
+    title: 'Main dishes',
+    data: ['Pizza', 'Burger', 'Risotto'],
+  },
+  {
+    title: 'Sides',
+    data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
+  },
+  {
+    title: 'Drinks',
+    data: ['Water', 'Coke', 'Beer'],
+  },
+  {
+    title: 'Desserts',
+    data: ['Cheese Cake', 'Ice Cream'],
   },
 ];

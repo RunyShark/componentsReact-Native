@@ -11,3 +11,8 @@ export interface RoutesProps extends Routes {
   id: string;
   component: () => JSX.Element;
 }
+
+export interface DataProps {
+  title: string;
+  data: Array<string>;
+}

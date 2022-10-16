@@ -5,3 +5,4 @@ export * from './Alert';
 export * from './InputText';
 export * from './PullToRefresh';
 export * from './SectionList';
+export * from './Modal';
