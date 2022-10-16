@@ -1,11 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {
-  HomeScreen,
-  Animation01Screen,
-  Animation02Screen,
-  SwitchScreen,
-} from '../../index';
+import {routesStack, RoutesProps} from '../../index';
 
 const Stack = createStackNavigator();
 
@@ -15,26 +10,14 @@ export const MyStack = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen
-        name="HomeScreen"
-        options={{title: 'HomeScreen'}}
-        component={HomeScreen}
-      />
-      <Stack.Screen
-        name="Animation01Screen"
-        options={{title: 'Animation01Screen'}}
-        component={Animation01Screen}
-      />
-      <Stack.Screen
-        name="Animation02Screen"
-        options={{title: 'Animation02Screen'}}
-        component={Animation02Screen}
-      />
-      <Stack.Screen
-        name="SwitchScreen"
-        options={{title: 'SwitchScreen'}}
-        component={SwitchScreen}
-      />
+      {routesStack.map(({component, name, title, id}: RoutesProps) => (
+        <Stack.Screen
+          name={name}
+          options={{title}}
+          component={component}
+          key={id}
+        />
+      ))}
     </Stack.Navigator>
   );
 };
