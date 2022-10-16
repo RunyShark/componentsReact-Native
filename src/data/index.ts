@@ -143,3 +143,96 @@ export const DATA: DataProps[] = [
     data: ['Cheese Cake', 'Ice Cream'],
   },
 ];
+
+export const Numbers: MenuItem[] = [
+  {
+    name: 'Animation 01',
+    icon: 'cube-outline',
+    component: 'Animation01Screen',
+  },
+  {
+    name: 'Animation 02',
+    icon: 'albums-outline',
+    component: 'Animation02Screen',
+  },
+  {
+    name: 'Switch 03',
+    icon: 'toggle-outline',
+    component: 'SwitchScreen',
+  },
+  {
+    name: 'Alert 04',
+    icon: 'alert-circle-outline',
+    component: 'AlertScreen',
+  },
+  {
+    name: 'InputText 04',
+    icon: 'alert-circle-outline',
+    component: 'InputTextScreen',
+  },
+  {
+    name: 'Pull to Refresh 05',
+    icon: 'refresh-outline',
+    component: 'PullToRefreshScreen',
+  },
+  {
+    name: 'Section List 06',
+    icon: 'refresh-outline',
+    component: 'SectionListScreen',
+  },
+  {
+    name: 'ModalScreen 07',
+    icon: 'refresh-outline',
+    component: 'ModalScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+  {
+    name: 'ModalScreen 08',
+    icon: 'refresh-outline',
+    component: 'infiniteScrollScreen',
+  },
+];
