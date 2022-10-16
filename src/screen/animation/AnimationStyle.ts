@@ -14,4 +14,9 @@ export const styles = StyleSheet.create({
     width: 150,
     height: 150,
   },
+  animationOneContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
