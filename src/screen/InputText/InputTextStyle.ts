@@ -7,4 +7,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
+  viewStyle: {
+    height: 100,
+  },
 });
