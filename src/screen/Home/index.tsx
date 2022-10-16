@@ -1,29 +1,20 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {FlattListMenuItem, menuItemsTemplate} from '../../index';
+
+import {FlattListMenuItem, menuItemsTemplate, HeaderTitle} from '../../index';
 import {styles} from './HomeStyle';
 
 export const HomeScreen = () => {
-  const {top} = useSafeAreaInsets();
-
-  const renderListHeader = () => (
-    <View style={{marginTop: top + 20, marginBottom: 20}}>
-      <Text style={styles.title}>Options menu</Text>
-    </View>
-  );
-
-  const itemSeparator = () => <View style={styles.itemSeparator} />;
-
   return (
-    <View style={(styles.componente, styles.globalMargin)}>
+    <View style={(styles.components, styles.globalMargin)}>
       <FlatList
         data={menuItemsTemplate}
         renderItem={({item}) => <FlattListMenuItem {...item} />}
         keyExtractor={(item) => item.name}
-        ListHeaderComponent={renderListHeader}
-        ItemSeparatorComponent={itemSeparator}
+        ListHeaderComponent={HeaderTitle({title: 'Menu options'})}
+        ItemSeparatorComponent={() => <View style={styles.itemSeparator} />}
       />
     </View>
   );
