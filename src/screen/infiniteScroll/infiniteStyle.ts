@@ -1,19 +1,12 @@
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
-  components: {
+  container: {
     flex: 1,
+    borderBottomColor: 'red',
   },
-  title: {
-    fontSize: 35,
-    fontWeight: 'bold',
-  },
-  globalMargin: {
-    marginHorizontal: 20,
-  },
-  itemSeparator: {
-    borderBottomWidth: 1,
-    opacity: 0.4,
-    marginVertical: 8,
+  textItem: {
+    backgroundColor: 'green',
+    height: 150,
   },
 });
