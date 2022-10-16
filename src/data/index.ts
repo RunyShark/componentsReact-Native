@@ -37,8 +37,8 @@ export const menuItemsTemplate: MenuItem[] = [
     component: 'InputTextScreen',
   },
   {
-    name: 'InputText 05',
-    icon: 'alert-circle-outline',
+    name: 'Pull to Refresh 05',
+    icon: 'refresh-outline',
     component: 'PullToRefreshScreen',
   },
 ];
