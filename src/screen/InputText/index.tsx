@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   TextInput,
   KeyboardAvoidingView,
@@ -7,12 +7,11 @@ import {
   Keyboard,
 } from 'react-native';
 import {styles} from './InputTextStyle';
-import {HeaderTitle} from '../../index';
 import {
   ScrollView,
   TouchableWithoutFeedback,
 } from 'react-native-gesture-handler';
-
+import {HeaderTitle, useForm} from '../../index';
 interface stateProps {
   name: string;
   lastName: string;
@@ -21,18 +20,14 @@ interface stateProps {
 }
 
 export const InputTextScreen = () => {
-  const [text, onChangeText] = useState<stateProps>({
+  const {form, onChange} = useForm<stateProps>({
     name: '',
     lastName: '',
     direction: '',
     phone: '',
   });
 
-  const {direction, lastName, name, phone} = text;
-
-  const onChange = (value: string, field: keyof typeof text) => {
-    onChangeText({...text, [field]: value});
-  };
+  const {direction, lastName, name, phone} = form;
 
   return (
     <KeyboardAvoidingView
