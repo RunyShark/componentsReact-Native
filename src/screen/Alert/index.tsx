@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Button} from 'react-native';
-import {useAlert} from '../../index';
+import {useAlert, HeaderTitle} from '../../index';
 import {styles} from './AlertStyle';
 
 export const AlertScreen = () => {
@@ -8,6 +8,7 @@ export const AlertScreen = () => {
 
   return (
     <View style={styles.container}>
+      <HeaderTitle title="Alert" />
       <Button title={'2-Button Alert'} onPress={createTwoButtonAlert} />
       <Button title={'3-Button Alert'} onPress={createThreeButtonAlert} />
     </View>

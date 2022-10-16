@@ -4,14 +4,22 @@ interface AlertProps {}
 
 export const useAlert = ({}: AlertProps) => {
   const createTwoButtonAlert = () =>
-    Alert.alert('Alert Title', 'My Alert Msg', [
+    Alert.alert(
+      'Alert Title',
+      'My Alert Msg',
+      [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'destructive',
+        },
+        {text: 'OK', onPress: () => console.log('OK Pressed')},
+      ],
       {
-        text: 'Cancel',
-        onPress: () => console.log('Cancel Pressed'),
-        style: 'cancel',
+        cancelable: true,
+        onDismiss: () => console.log('onDism'),
       },
-      {text: 'OK', onPress: () => console.log('OK Pressed')},
-    ]);
+    );
 
   const createThreeButtonAlert = () =>
     Alert.alert('Alert Title', 'My Alert Msg', [

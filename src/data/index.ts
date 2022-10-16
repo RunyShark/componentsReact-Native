@@ -6,6 +6,7 @@ import {
   MenuItem,
   RoutesProps,
   AlertScreen,
+  InputTextScreen,
 } from '../index';
 
 export const menuItemsTemplate: MenuItem[] = [
@@ -26,8 +27,13 @@ export const menuItemsTemplate: MenuItem[] = [
   },
   {
     name: 'Alert 04',
-    icon: 'toggle-outline',
+    icon: 'alert-circle-outline',
     component: 'AlertScreen',
+  },
+  {
+    name: 'InputText 04',
+    icon: 'alert-circle-outline',
+    component: 'InputTextScreen',
   },
 ];
 
@@ -61,5 +67,11 @@ export const routesStack: RoutesProps[] = [
     name: 'AlertScreen',
     title: 'AlertScreen',
     component: AlertScreen,
+  },
+  {
+    id: '6',
+    name: 'InputTextScreen',
+    title: 'InputTextScreen',
+    component: InputTextScreen,
   },
 ];
