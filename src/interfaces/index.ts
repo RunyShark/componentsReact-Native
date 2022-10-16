@@ -1,3 +1,5 @@
+import {ImageSourcePropType} from 'react-native';
+
 type Routes = Omit<MenuItem, 'icon' | 'component'>;
 
 export interface MenuItem {
@@ -15,4 +17,10 @@ export interface RoutesProps extends Routes {
 export interface DataProps {
   title: string;
   data: Array<string>;
+}
+
+export interface Slide {
+  title: string;
+  desc: string;
+  img: ImageSourcePropType;
 }

@@ -13,57 +13,58 @@ import {
   ModalScreen,
   infiniteScrollScreen,
   SliceScreen,
+  Slide,
 } from '../index';
 
 export const menuItemsTemplate: MenuItem[] = [
   {
-    name: 'Animation 01',
+    name: 'Animation',
     icon: 'cube-outline',
     component: 'Animation01Screen',
   },
   {
-    name: 'Animation 02',
+    name: 'Animation',
     icon: 'albums-outline',
     component: 'Animation02Screen',
   },
   {
-    name: 'Switch 03',
+    name: 'Switch',
     icon: 'toggle-outline',
     component: 'SwitchScreen',
   },
   {
-    name: 'Alert 04',
+    name: 'Alert',
     icon: 'alert-circle-outline',
     component: 'AlertScreen',
   },
   {
-    name: 'InputText 04',
+    name: 'InputText',
     icon: 'alert-circle-outline',
     component: 'InputTextScreen',
   },
   {
-    name: 'Pull to Refresh 05',
+    name: 'Pull to Refresh',
     icon: 'refresh-outline',
     component: 'PullToRefreshScreen',
   },
   {
-    name: 'Section List 06',
-    icon: 'refresh-outline',
+    name: 'Section List',
+    icon: 'list-outline',
     component: 'SectionListScreen',
   },
   {
-    name: 'ModalScreen 07',
-    icon: 'refresh-outline',
+    name: 'ModalScreen',
+    icon: 'copy-outline',
     component: 'ModalScreen',
   },
   {
-    name: 'ModalScreen 08',
-    icon: 'refresh-outline',
+    name: 'ModalScreen',
+    icon: 'download-outline',
     component: 'infiniteScrollScreen',
   },
   {
-    name: 'Temp 09',
-    icon: 'refresh-outline',
+    name: 'Slice',
+    icon: 'flower-outline',
     component: 'SliceScreen',
   },
 ];
@@ -133,7 +134,7 @@ export const routesStack: RoutesProps[] = [
     id: '11',
     name: 'SliceScreen',
     title: 'SliceScreen',
-    component: infiniteScrollScreen,
+    component: SliceScreen,
   },
 ];
 
@@ -153,5 +154,26 @@ export const DATA: DataProps[] = [
   {
     title: 'Desserts',
     data: ['Cheese Cake', 'Ice Cream'],
+  },
+];
+
+export const items: Slide[] = [
+  {
+    title: 'Title 1',
+    desc:
+      'Ea et eu enim fugiat sunt reprehenderit sunt aute quis tempor ipsum cupidatat et.',
+    img: require('../assets/slide-1.png'),
+  },
+  {
+    title: 'Title 2',
+    desc:
+      'Anim est quis elit proident magna quis cupidatat culpa labore Lorem ea. Exercitation mollit velit in aliquip tempor occaecat dolor minim amet dolor enim cillum excepteur. ',
+    img: require('../assets/slide-2.png'),
+  },
+  {
+    title: 'Title 3',
+    desc:
+      'Ex amet duis amet nulla. Aliquip ea Lorem ea culpa consequat proident. Nulla tempor esse ad tempor sit amet Lorem. Velit ea labore aute pariatur commodo duis veniam enim.',
+    img: require('../assets/slide-3.png'),
   },
 ];
