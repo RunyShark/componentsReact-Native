@@ -44,13 +44,16 @@ export const useAnimate = () => {
 
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
-    onPanResponderMove: Animated.event([
-      null,
-      {
-        dx: xy.x, // x,y are Animated.Value
-        dy: xy.y,
-      },
-    ]),
+    onPanResponderMove: Animated.event(
+      [
+        null,
+        {
+          dx: xy.x, // x,y are Animated.Value
+          dy: xy.y,
+        },
+      ],
+      {useNativeDriver: false},
+    ),
     onPanResponderRelease: () => {
       Animated.spring(
         xy, // Auto-multiplexed
