@@ -1,3 +1,4 @@
 export * from './Home';
-export * from './animation';
+export * from './Animation';
 export * from './Switch';
+export * from './Alert';

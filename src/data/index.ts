@@ -5,6 +5,7 @@ import {
   SwitchScreen,
   MenuItem,
   RoutesProps,
+  AlertScreen,
 } from '../index';
 
 export const menuItemsTemplate: MenuItem[] = [
@@ -22,6 +23,11 @@ export const menuItemsTemplate: MenuItem[] = [
     name: 'Switch 03',
     icon: 'toggle-outline',
     component: 'SwitchScreen',
+  },
+  {
+    name: 'Alert 04',
+    icon: 'toggle-outline',
+    component: 'AlertScreen',
   },
 ];
 
@@ -49,5 +55,11 @@ export const routesStack: RoutesProps[] = [
     name: 'SwitchScreen',
     title: 'SwitchScreen',
     component: SwitchScreen,
+  },
+  {
+    id: '5',
+    name: 'AlertScreen',
+    title: 'AlertScreen',
+    component: AlertScreen,
   },
 ];

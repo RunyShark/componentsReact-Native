@@ -1,6 +1,6 @@
 import React from 'react';
 import {Animated, Button, View} from 'react-native';
-import {useAnimate} from '../../index';
+import {useAnimate} from '../../index/index';
 import {styles} from './AnimationStyle';
 
 export const Animation01Screen = () => {
