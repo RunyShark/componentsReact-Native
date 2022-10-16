@@ -20,14 +20,12 @@ interface stateProps {
 }
 
 export const InputTextScreen = () => {
-  const {form, onChange} = useForm<stateProps>({
+  const {direction, lastName, name, phone, onChange} = useForm<stateProps>({
     name: '',
     lastName: '',
     direction: '',
     phone: '',
   });
-
-  const {direction, lastName, name, phone} = form;
 
   return (
     <KeyboardAvoidingView

@@ -7,6 +7,7 @@ import {
   RoutesProps,
   AlertScreen,
   InputTextScreen,
+  PullToRefreshScreen,
 } from '../index';
 
 export const menuItemsTemplate: MenuItem[] = [
@@ -34,6 +35,11 @@ export const menuItemsTemplate: MenuItem[] = [
     name: 'InputText 04',
     icon: 'alert-circle-outline',
     component: 'InputTextScreen',
+  },
+  {
+    name: 'InputText 05',
+    icon: 'alert-circle-outline',
+    component: 'PullToRefreshScreen',
   },
 ];
 
@@ -73,5 +79,11 @@ export const routesStack: RoutesProps[] = [
     name: 'InputTextScreen',
     title: 'InputTextScreen',
     component: InputTextScreen,
+  },
+  {
+    id: '7',
+    name: 'PullToRefreshScreen',
+    title: 'PullToRefreshScreen',
+    component: PullToRefreshScreen,
   },
 ];
