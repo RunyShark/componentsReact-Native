@@ -1,20 +1,60 @@
 import React, {useState} from 'react';
-import {View, Switch} from 'react-native';
+import {Text, View} from 'react-native';
 import {styles} from './SwitchStyle';
+import {CustomSwitch, HeaderTitle} from '../../index';
 
 export const SwitchScreen = () => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  // const [textValue, setTextValue] = useState('');
+  const [state, setState] = useState({
+    isActive: true,
+    isHungry: false,
+    isHappy: true,
+  });
 
   return (
     <View style={styles.container}>
-      <Switch
-        trackColor={{false: '#767577', true: '#81b0ff'}}
-        thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-      />
+      <HeaderTitle title={'Switches'} />
+
+      <View>
+        <Text style={styles.switchText}>isActive</Text>
+        <CustomSwitch
+          isOn={false}
+          onChange={(e) =>
+            setState({
+              ...state,
+              isActive: e,
+            })
+          }
+        />
+      </View>
+
+      <View>
+        <Text style={styles.switchText}>isHungry</Text>
+        <CustomSwitch
+          isOn={false}
+          onChange={(e) =>
+            setState({
+              ...state,
+              isHungry: e,
+            })
+          }
+        />
+      </View>
+
+      <View>
+        <Text style={styles.switchText}>isHappy</Text>
+        <CustomSwitch
+          isOn={false}
+          onChange={(e) =>
+            setState({
+              ...state,
+              isHappy: e,
+            })
+          }
+        />
+      </View>
+
+      <Text style={styles.switchText}>{JSON.stringify(state, null, 5)}</Text>
     </View>
   );
 };

@@ -2,8 +2,14 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    marginHorizontal: 20,
+  },
+  switchText: {
+    fontSize: 25,
+  },
+  switchRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });
