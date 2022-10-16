@@ -1,46 +1,29 @@
-import React, {useRef} from 'react';
-import {Animated, Button, View, Easing} from 'react-native';
+import React from 'react';
+import {Animated, Button, View} from 'react-native';
+import {useAnimate} from '../../index';
 import {styles} from './AnimationStyle';
 
 export const Animation01Screen = () => {
-  const opacity = useRef(new Animated.Value(0)).current;
-  const top = useRef(new Animated.Value(-100)).current;
-
-  const fadeIn = () => {
-    Animated.timing(opacity, {
-      toValue: 1,
-      duration: 300,
-      useNativeDriver: true,
-    }).start();
-
-    Animated.timing(top, {
-      toValue: 0,
-      duration: 700,
-      useNativeDriver: true,
-      easing: Easing.bounce,
-    }).start();
-  };
-
-  const fadeOut = () => {
-    Animated.timing(opacity, {
-      toValue: 0,
-      duration: 300,
-      useNativeDriver: true,
-    }).start();
-  };
+  const {fadeIn, fadeOut, opacity, startMoving, position} = useAnimate();
 
   return (
-    <View style={styles.animationOneContainer}>
+    <View style={styles.animationContainer}>
       <Animated.View
         // eslint-disable-next-line react-native/no-inline-styles
         style={{
           ...styles.purpleBox,
           marginBottom: 20,
           opacity,
-          transform: [{translateY: top}],
+          transform: [{translateY: position}],
         }}
       />
-      <Button title="FadeIn" onPress={fadeIn} />
+      <Button
+        title="FadeIn"
+        onPress={() => {
+          fadeIn();
+          startMoving({initPosition: -100});
+        }}
+      />
       <Button title="fadeOut" onPress={fadeOut} />
     </View>
   );

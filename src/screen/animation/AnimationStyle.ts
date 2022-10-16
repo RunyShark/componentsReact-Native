@@ -9,12 +9,18 @@ export const styles = StyleSheet.create({
     width: 150,
     height: 150,
   },
+  blueBox: {
+    backgroundColor: '#75CEDB',
+    width: 150,
+    height: 150,
+    borderRadius: 10,
+  },
   redBox: {
     backgroundColor: 'red',
     width: 150,
     height: 150,
   },
-  animationOneContainer: {
+  animationContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
