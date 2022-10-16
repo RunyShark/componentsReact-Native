@@ -9,4 +9,9 @@ export const styles = StyleSheet.create({
     width: 150,
     height: 150,
   },
+  redBox: {
+    backgroundColor: 'red',
+    width: 150,
+    height: 150,
+  },
 });

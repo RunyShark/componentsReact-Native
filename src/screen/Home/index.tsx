@@ -8,14 +8,14 @@ import {styles} from './HomeStyle';
 
 const menuItems: MenuItem[] = [
   {
-    name: 'Animation 101',
+    name: 'Animation 01',
     icon: 'cube-outline',
-    component: 'Animation101Screen',
+    component: 'Animation01Screen',
   },
   {
-    name: 'Animation 102',
+    name: 'Animation 02',
     icon: 'albums-outline',
-    component: 'Animation101Screen',
+    component: 'Animation02Screen',
   },
 ];
 

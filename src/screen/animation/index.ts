@@ -1,2 +1,2 @@
-export * from './animation01';
-export * from './animation02';
+export * from './Animation01Screen';
+export * from './Animation02Screen';

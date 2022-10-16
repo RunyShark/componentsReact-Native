@@ -9,9 +9,14 @@ import {useNavigation} from '@react-navigation/native';
 interface PropsFlatList extends MenuItem {}
 
 export const FlattListMenuItem = ({component, name, icon}: PropsFlatList) => {
-  const {navigate} = useNavigation();
+  console.log('component', component);
+
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity activeOpacity={0.8} onPress={() => navigate(component)}>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={() => navigation.navigate(component)}>
       <View style={styles.container}>
         <Icon name={icon} color="gray" size={23} />
         <Text style={styles.itemText}>{name}</Text>
